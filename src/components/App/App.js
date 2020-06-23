@@ -1,21 +1,14 @@
-import React, { Component } from "react";
+import React, {useState} from "react";
 import Home from "../Home/Home";
 import "./App.css";
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      price: null
-    };
-    this.setPrice = this.setPrice.bind(this);
-  }
+function App()  {
+   const [price, setPrice] = useState(null)
 
-  setPrice(price) {
-    this.setState({ price: price });
-  }
+  // const setPrice = (price) =>  {
+  //   setPrice({ price: price });
+  // }
 
-  render() {
     return (
       <div>
         <nav>
@@ -29,8 +22,7 @@ class App extends Component {
           <Home />
         </main>
       </div>
-    );
-  }
+    )
 }
 
 export default App;
